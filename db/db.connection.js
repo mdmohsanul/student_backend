@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
-require("dotenv").config;
+require("dotenv").config();
 
 const mongo_URI = process.env.MONGODB_URI;
 
-const initializeDB = async () => {
+const initializeDatabase = async () => {
   try {
     const connection = await mongoose.connect(mongo_URI);
     if (connection) {
@@ -14,4 +14,4 @@ const initializeDB = async () => {
   }
 };
 
-module.exports = { initializeDB };
+module.exports = { initializeDatabase };
